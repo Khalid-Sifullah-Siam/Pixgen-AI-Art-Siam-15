@@ -2,13 +2,12 @@ import CategoryFilter from "@/Components/CategoryFilter";
 import PhotoCard from "@/Components/PhotoCard";
 import { Button } from "@heroui/react";
 import Link from "next/link";
+import { getJson } from "@/lib/get-json";
 
 const AllPhotosPage = async ({searchParams}) => {
   const {category} = await searchParams;
-  const res = await fetch('http://localhost:3000/data.json')// ata change korta hoba
-  const dataObject = await res.json();
-  const categoryRes = await fetch('http://localhost:3000/category.json');
-  const categories = await categoryRes.json();
+  const dataObject = await getJson("data.json");
+  const categories = await getJson("category.json");
 
   const filteredData = category ? dataObject.filter(data => data.category.toLowerCase() === category.toLowerCase() ) : dataObject;
 

@@ -1,12 +1,12 @@
 import { Button } from "@heroui/react";
 import PhotoCard from "./PhotoCard";
 import Link from "next/link";
+import { getJson } from "@/lib/get-json";
 
 
 const TopGenerations = async () => {
 
-    const res = await fetch('http://localhost:3000/data.json')// ata change korta hoba
-    const dataObject = await res.json();
+    const dataObject = await getJson("data.json");
     return (
         <div>
             <h1 className="text-center text-2xl font-bold my-6">Top Generations</h1>

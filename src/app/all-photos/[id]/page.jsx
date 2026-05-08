@@ -1,10 +1,10 @@
+import { getJson } from "@/lib/get-json";
 import Image from 'next/image';
 import React from 'react';
 
 const PhotoDetailsPage = async ({ params }) => {
   const { id } = await params;
-  const res = await fetch('http://localhost:3000/data.json'); 
-  const dataObject = await res.json();
+  const dataObject = await getJson("data.json");
 
   const findPhoto = dataObject.find(data => String(data.id) === String(id));
 
