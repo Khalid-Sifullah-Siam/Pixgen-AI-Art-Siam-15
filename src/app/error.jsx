@@ -1,13 +1,8 @@
 "use client";
-
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { RefreshCcw, Home, AlertTriangle } from 'lucide-react';
 
-/**
- * Custom Error Page for Next.js
- * This must be a Client Component
- */
 
 export default function Error({ error, reset }) {
   useEffect(() => {

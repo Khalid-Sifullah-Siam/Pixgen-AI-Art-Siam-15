@@ -1,15 +1,8 @@
 "use client";
-
 import React from 'react';
 import Link from 'next/link';
 import { Home, MoveLeft, AlertCircle } from 'lucide-react';
 
-/**
- * Custom 404 Not Found Page
- * Framework: Next.js (App Router)
- * Styling: Tailwind CSS
- * Icons: Lucide React
- */
 
 export default function NotFound() {
   return (
