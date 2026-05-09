@@ -5,6 +5,7 @@ import { Envelope } from "@gravity-ui/icons";
 import { Button, FieldError, Input, Label, Modal, Surface, TextField } from "@heroui/react";
 import { BiEdit } from "react-icons/bi";
 import { FaUser } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 export function UpdateUserForm() {
 
@@ -19,7 +20,7 @@ export function UpdateUserForm() {
       image,
     });
 
-    alert("You have updated your information.");
+    toast.success("You have updated your information.");
   };
 
   return (

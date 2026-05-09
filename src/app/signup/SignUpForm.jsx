@@ -14,6 +14,7 @@ import {
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 export default function SignUpForm() {
   const router = useRouter();
@@ -34,12 +35,13 @@ export default function SignUpForm() {
     });
 
     if (!error) {
-      alert(`SignUp success, Welcome ${name}!`);
+      toast.success(`SignUp success, Welcome ${name}!`)
       router.push("/");
       return;
     }
-
-    alert("SignUp failed!");
+    else{
+      toast.error("SignUp failed!")
+    }
   };
 
   const handleGoogleSignUp = async () => {

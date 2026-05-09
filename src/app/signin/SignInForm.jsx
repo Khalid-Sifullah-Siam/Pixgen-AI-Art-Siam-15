@@ -13,6 +13,7 @@ import {
   TextField,
 } from "@heroui/react";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 export default function SignInForm() {
   const onSubmit = async (e) => {
@@ -27,7 +28,13 @@ export default function SignInForm() {
       callbackURL: "/",
     });
 
-    alert(!error ? "SignIn success" : "SignIn failed!");
+    if(!error){
+      toast.success("SignIn success");
+    }
+    else{
+      toast.error("SignIn failed!")
+    }
+
   };
 
   const handleGoogleSignIn = async () => {
