@@ -17,14 +17,14 @@ const TopGenerations = async () => {
       </div>
 
       <div className="px-4 md:px-12 lg:px-24">
+        {/* Button এর ভেতর Link */}
         <Button
-          as={Link}
-          href="/all-photos"
           fullWidth
-          className="bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 text-white font-bold text-xl md:text-2xl py-6 rounded-xl shadow-md hover:shadow-xl hover:scale-[1.03] transition-all duration-500 ease-in-out"
+          className="bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 text-white font-bold text-xl md:text-2xl py-8 rounded-xl shadow-md hover:shadow-xl hover:scale-[1.03] transition-all duration-500 ease-in-out"
         >
-          View All Photos -{">"}
-          
+          <Link href="/all-photos" className="w-full h-full flex items-center justify-center">
+            View All Photos -{">"}
+          </Link>
         </Button>
       </div>
     </div>
