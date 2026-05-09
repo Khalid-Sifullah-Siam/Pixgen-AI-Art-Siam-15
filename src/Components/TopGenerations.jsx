@@ -23,7 +23,8 @@ const TopGenerations = async () => {
           fullWidth
           className="bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 text-white font-bold text-xl md:text-2xl py-6 rounded-xl shadow-md hover:shadow-xl hover:scale-[1.03] transition-all duration-500 ease-in-out"
         >
-          View All Photos ->
+          View All Photos -{">"}
+          
         </Button>
       </div>
     </div>
