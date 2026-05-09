@@ -7,8 +7,6 @@ import { IoHeart } from "react-icons/io5";
 const PhotoCard = ({ data }) => {
   const { id, title, imageUrl, category, likes, downloads } = data;
  
-
-  
   return (
     <Card
       className="border rounded-xl overflow-hidden shadow-sm 

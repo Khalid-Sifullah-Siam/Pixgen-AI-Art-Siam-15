@@ -4,6 +4,11 @@ import { Button } from "@heroui/react";
 import Link from "next/link";
 import { getJson } from "@/lib/get-json";
 
+export const metadata = {
+  title: "All Photos",
+  description: "Explore the full Pixgen photo gallery.",
+};
+
 const AllPhotosPage = async ({searchParams}) => {
   const {category} = await searchParams;
   const dataObject = await getJson("data.json");

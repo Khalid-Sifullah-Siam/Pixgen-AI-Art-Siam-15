@@ -1,12 +1,31 @@
 import { getJson } from "@/lib/get-json";
 import Image from 'next/image';
-import React from 'react';
+
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const dataObject = await getJson("data.json");
+  const findPhoto = dataObject.find((data) => String(data.id) === String(id));
+
+  if (!findPhoto) {
+    return {
+      title: "Photo Details",
+    };
+  }
+
+  return {
+    title: `${findPhoto.title} Details`,
+    description: findPhoto.prompt,
+  };
+}
 
 const PhotoDetailsPage = async ({ params }) => {
   const { id } = await params;
   const dataObject = await getJson("data.json");
 
   const findPhoto = dataObject.find(data => String(data.id) === String(id));
+  if (!findPhoto) {
+    return null;
+  }
 
   const { title, imageUrl, category, likes, downloads, prompt, resolution } = findPhoto;
 
