@@ -46,7 +46,7 @@ export function UpdateUserForm() {
                     <Input placeholder="Enter your name" />
                   </TextField>
 
-                  <TextField isRequired name="image" type="text">
+                  <TextField name="image" type="text">
                     <Label>Image URL</Label>
                     <Input placeholder="Image URL" />
                     <FieldError />
